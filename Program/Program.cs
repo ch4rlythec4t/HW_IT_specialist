@@ -1,15 +1,13 @@
 ﻿
 static string[] SelectArray(string[] inputStringArray)
 {
-    int j = 0;
-    string[] newStringArray = new string[inputStringArray.Length];
+      string[] newStringArray = new string[inputStringArray.Length];
 
     for (int i = 0; i < inputStringArray.Length; i++)
     {
         if (inputStringArray[i].Length <= 3)
         {
-            newStringArray[j] = inputStringArray[i];
-            j++;
+            newStringArray[i] = inputStringArray[i];
         }
     }
     newStringArray = newStringArray.Where(x => x != null).ToArray();
